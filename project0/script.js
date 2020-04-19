@@ -8,15 +8,14 @@ const classNames = {
 const list = document.getElementById('todo-list')
 const itemCountSpan = document.getElementById('item-count')
 const uncheckedCountSpan = document.getElementById('unchecked-count')
-let counter = 0
-
+var counter = 0
 
 function newTodo() {
   alert('Added new item')
   let item = document.createTextNode("New Item\n")
   list.appendChild(item)
-  counter +=1
-  itemCountSpan.value = counter
-  
+  counter++
+  itemCountSpan.textContent=counter.toString()
+
   
   }
