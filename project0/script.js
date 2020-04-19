@@ -13,6 +13,11 @@ var counter = 0
 function newTodo() {
   alert('Added new item')
   let item = document.createTextNode("New Item\n")
+  let checkbox =document.createElement('input')
+  checkbox.type = "checkbox"
+  //checkbox.value = 1
+  checkbox.name = "todo[]"
+  list.appendChild(checkbox)
   list.appendChild(item)
   counter++
   itemCountSpan.textContent=counter.toString()
